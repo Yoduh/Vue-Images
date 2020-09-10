@@ -6,6 +6,7 @@
 
 <script>
 import { mapActions } from 'vuex';
+import { router } from '../main';
 
 export default {
     name: 'AuthHandler',
@@ -14,6 +15,7 @@ export default {
     },
     created() {
         this.finalizeLogin(window.location.hash);
+        router.push('/');
     }
 }
 </script>
